@@ -14,7 +14,7 @@
         <div class="item">
             <div class="thumbnail" style="background-image: url(/images/book.png);"></div>
             <p class="title">الكتاب المدرسي</p>
-            <button>
+            <button onclick="downloadFile('/files/book.pdf')">
 
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -35,7 +35,7 @@
         <div class="item">
             <div class="thumbnail" style="background-image: url(/images/geometry\ calclulations.png);"></div>
             <p class="title">الحجوم و المساحات</p>
-            <button>
+            <button onclick="downloadFile('/files/volume.pdf')">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -55,7 +55,7 @@
         <div class="item">
             <div class="thumbnail" style="background-image: url(/images/geometry\ cours.png);"></div>
             <p class="title">درس الهندسة</p>
-            <button>
+            <button onclick="downloadFile('/files/file.pdf')">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -75,7 +75,7 @@
         <div class="item">
             <div class="thumbnail" style="background-image: url(/images/exams.png);"></div>
             <p class="title">الامتحانات</p>
-            <button>
+            <button onclick="downloadFile('/files/exams.pdf')">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -93,6 +93,18 @@
             </div>
         </div>
     </main>
+
+    <script>
+        function downloadFile(filepath) {
+            var link = document.createElement('a');
+            link.href = filepath;
+            link.download = filepath.substr(filepath.lastIndexOf('/') + 1);
+            link.style.display = 'none';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
 </body>
 
 </html>
