@@ -33,6 +33,24 @@ main.container {
         border: 4px solid #ccc;
         padding: 16px;
         color: #000;
+        &.heighlight {
+            border: 4px solid #E1FFBB;
+            background: #FFF;
+            .thumbnail {
+                border: 4px solid #E1FFBB;
+            }
+
+            button {
+                background-color: #fff;
+                color: #009990;
+                border: 2px solid #009990;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                padding: 0 20px;
+            }
+        }
         .thumbnail {
             width: 100%;
             height: 350px;
