@@ -72,7 +72,7 @@
     <!-- Header -->
     <header class="flex items-center justify-between p-2 bg-white shadow">
       <a href="/" class="border-r pr-4 border-gray-200">
-        <img src="favicon.png" alt="almofid logo" class="w-10 h-10" />
+        <img src="/favicon.png" alt="almofid logo" class="w-10 h-10" />
       </a>
       <div
         class="w-14 h-14 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-500 flex items-center justify-center">
@@ -113,24 +113,137 @@
       </div>
     </div>
 
+    <div class="container p-2">
+      <div class="flex items-center my-2 gap-2">
+        <a href="/" class="flex items-center ">
+          <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+            </svg>
+          </div>
+          <span class="ml-2">Accueil</span>
+        </a>
+        <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-4">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+          </svg>
+        </div>
+        <a href="/pages/3eme-ac.html">
+          <span class="ml-2">3eme année</span>
+        </a>
+      </div>
+      <!-- Semester I -->
+      <section id="semester1" class="border rounded-lg overflow-hidden">
+        <div class="flex justify-between items-center bg-teal-700 text-white p-3 cursor-pointer"
+          onclick="toggleSection('semester1-content')">
+          <h2 class="text-lg font-bold">Semestre N° I</h2>
+          <span id="semester1-toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14" />
+            </svg>
+          </span>
+        </div>
+        <div id="semester1-content" class="p-2">
+          <!-- Table -->
+          <table class="my-2">
+            <tr>
+              <td class="border p-2 bg-yellow-200 w-full">Devoir à la maison N° 3</td>
+              <td class="border p-2 text-center">
+                <button
+                  onclick="downloadFile('https://drive.google.com/file/d/1lfV9ocOrJ3JMUYICiEiyssqqTdI9g020/view?usp=sharing')"
+                  class="text-blue-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+          </table>
+          <table class="my-2">
+            <tr>
+              <td class="border p-2 bg-green-200 w-full">Examen local 3ème année collège</td>
+              <td class="border p-2 text-center">
+                <button
+                  onclick="downloadFile('https://drive.google.com/file/d/1OT3j63NPctRVpk2m9yhifWmAGPuaRRSm/view?usp=sharing')"
+                  class="text-blue-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+          </table>
+          <table class="my-2">
+            <tr>
+              <td class="border p-2 bg-blue-200 w-full">Résumé de cours 1er semestre</td>
+              <td class="border p-2 text-center">
+                <button
+                  onclick="downloadFile('https://drive.google.com/file/d/1GFWC3cqi9zVbfoiRIeeIvA78CI0gj8kJ/view?usp=sharing')"
+                  class="text-blue-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+          </table>
+          <!-- Add more sections as necessary -->
+        </div>
+      </section>
 
-    <div class="container p-2 grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-      <a href="/pages/1er-ac.html" class="rounded-lg overflow-hidden">
-        <img src="/img/1er-ac.png" alt="1er-ac" class="w-full rounded-lg">
-      </a>
-      <a href="/pages/2eme-ac.html" class="rounded-lg overflow-hidden">
-        <img src="/img/2eme-ac.png" alt="2eme-ac" class="w-full rounded-lg">
-      </a>
-      <a href="/pages/3eme-ac.html" class="rounded-lg overflow-hidden">
-        <img src="/img/3eme-ac.png" alt="3eme-ac" class="w-full rounded-lg">
-      </a>
-      <a href="https://drive.google.com/file/d/1b-OgL9h2lgv9k7bCdBqXsrEQ_Ag4vBBN/view?usp=sharing" target="_blank"
-        class="rounded-lg overflow-hidden">
-        <img src="/img/vacations.png" alt="vacance scolaire" class="w-full rounded-lg">
-      </a>
+      <!-- Semester II -->
+      <section id="semester2" class="mt-2 border rounded-lg overflow-hidden">
+        <div class="flex justify-between items-center bg-teal-700 text-white p-3 cursor-pointer"
+          onclick="toggleSection('semester2-content')">
+          <h2 class="text-lg font-bold">Semestre N° II</h2>
+          <span id="semester2-toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+            </svg>
+          </span>
+        </div>
+        <div id="semester2-content" class="hidden p-4">
+          <!-- Content for Semester II -->
+          <p>Le contenu du deuxième semestre sera bientôt disponible...</p>
+        </div>
+      </section>
     </div>
-
   </div>
+
+  <script>
+    // Expand/collapse functionality
+    function toggleSection(sectionId) {
+      const sectionContent = document.getElementById(sectionId);
+      const toggleButton =
+        sectionContent.previousElementSibling.querySelector("span svg");
+
+      if (sectionContent.classList.contains("hidden")) {
+        sectionContent.classList.remove("hidden");
+        toggleButton.innerHTML =
+          '<path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14" />';
+      } else {
+        sectionContent.classList.add("hidden");
+        toggleButton.innerHTML =
+          '<path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />';
+      }
+    }
+
+    // Download file functionality
+    function downloadFile(url) {
+      window.open(url, "_blank");
+    }
+  </script>
 
   <script>
     document.getElementById('profileImage').addEventListener('click', () => {

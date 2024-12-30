@@ -64,15 +64,21 @@
     body {
       font-family: "Edu SA Beginner", serif;
     }
+
+    .book-thumbnail {
+      object-fit: cover;
+      /* Ensure images cover the area properly */
+    }
   </style>
 </head>
 
 <body class="bg-white text-black">
   <div class="max-w-5xl mx-auto">
+
     <!-- Header -->
     <header class="flex items-center justify-between p-2 bg-white shadow">
       <a href="/" class="border-r pr-4 border-gray-200">
-        <img src="favicon.png" alt="almofid logo" class="w-10 h-10" />
+        <img src="/favicon.png" alt="almofid logo" class="w-10 h-10" />
       </a>
       <div
         class="w-14 h-14 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-500 flex items-center justify-center">
@@ -113,24 +119,78 @@
       </div>
     </div>
 
+    <!-- Books Section -->
+    <div class="container p-2 grid gap-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
 
-    <div class="container p-2 grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-      <a href="/pages/1er-ac.html" class="rounded-lg overflow-hidden">
-        <img src="/img/1er-ac.png" alt="1er-ac" class="w-full rounded-lg">
-      </a>
-      <a href="/pages/2eme-ac.html" class="rounded-lg overflow-hidden">
-        <img src="/img/2eme-ac.png" alt="2eme-ac" class="w-full rounded-lg">
-      </a>
-      <a href="/pages/3eme-ac.html" class="rounded-lg overflow-hidden">
-        <img src="/img/3eme-ac.png" alt="3eme-ac" class="w-full rounded-lg">
-      </a>
-      <a href="https://drive.google.com/file/d/1b-OgL9h2lgv9k7bCdBqXsrEQ_Ag4vBBN/view?usp=sharing" target="_blank"
-        class="rounded-lg overflow-hidden">
-        <img src="/img/vacations.png" alt="vacance scolaire" class="w-full rounded-lg">
-      </a>
+      <!-- Book 1 -->
+      <div class="rounded-lg overflow-hidden shadow-lg bg-white">
+        <img src="/img/book-2.jpg" alt="Book 2" class="book-thumbnail" />
+        <div class="p-2">
+          <h3 class="text-lg font-semibold">AL MOUFID 1er</h3>
+          <button
+            onclick="downloadFile('https://drive.google.com/file/d/1rkMylw-0-eImZWsxn__jiZKuvsIWtdZM/view?usp=sharing')"
+            class="flex items-center space-x-2 bg-blue-500 text-white p-2 rounded-lg w-full mt-2">
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+              </svg>
+            </div>
+            <p>Télécharger</p>
+          </button>
+        </div>
+      </div>
+
+      <!-- Book 2 -->
+      <div class="rounded-lg overflow-hidden shadow-lg bg-white">
+        <img src="/img/book-3.jpg" alt="Book 3" class="book-thumbnail" />
+        <div class="p-2">
+          <h3 class="text-lg font-semibold">AL MOUFID 2eme</h3>
+          <button
+            onclick="downloadFile('https://drive.google.com/file/d/1JzPglWlU6l8W_V_95EwRWCjECi4KDP_R/view?usp=sharing')"
+            class="flex items-center space-x-2 bg-blue-500 text-white p-2 rounded-lg w-full mt-2">
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+              </svg>
+            </div>
+            <p>Télécharger</p>
+          </button>
+        </div>
+      </div>
+
+      <!-- Book 3 -->
+      <div class="rounded-lg overflow-hidden shadow-lg bg-white">
+        <img src="/img/book.jpg" alt="Book 1" class="book-thumbnail" />
+        <div class="p-2">
+          <h3 class="text-lg font-semibold">AL MOUFID 3eme</h3>
+          <button
+            onclick="downloadFile('https://drive.google.com/file/d/1JLmZT3Qh5bbMMXvUJfxQjAi3oPZefW4y/view?usp=sharing')"
+            class="flex items-center space-x-2 bg-blue-500 text-white p-2 rounded-lg w-full mt-2">
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+              </svg>
+            </div>
+            <p>Télécharger</p>
+          </button>
+        </div>
+      </div>
+
     </div>
 
   </div>
+
+  <script>
+    function downloadFile(url) {
+      window.open(url, "_blank");
+    }
+  </script>
 
   <script>
     document.getElementById('profileImage').addEventListener('click', () => {

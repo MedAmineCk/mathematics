@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html class="no-js" lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Découvrez les cours, exercices, devoirs et examens de mathématiques pour étudiants en collège. Almofid.ma vous aide à réussir vos études avec des ressources gratuites." />
+  <meta name="keywords" content="mathématiques, cours, exercices, devoirs, examens, Maroc, étudiants" />
+  <meta name="author" content="Mohamed Amine Chekrouni">
+  
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#ffffff">
+  
+  <title>Almofid.ma - Cours et Exercices de Mathématiques pour Étudiants</title>
+  <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Almofid",
+            "url": "https://almofid.ma",
+            "description": "Un site éducatif pour les étudiants en mathématiques.",
+            "sitelinks": [
+                {
+                    "@type": "SiteNavigationElement",
+                    "url": "https://almofid.ma/pages/1er-ac.html",
+                    "name": "1er Ac",
+                    "position": 1
+                },
+                {
+                    "@type": "SiteNavigationElement",
+                    "url": "https://almofid.ma/pages/2eme-ac.html",
+                    "name": "2eme Ac",
+                    "position": 2
+                },
+                {
+                    "@type": "SiteNavigationElement",
+                    "url": "https://almofid.ma/pages/3eme-ac.html",
+                    "name": "3eme Ac",
+                    "position": 3
+                },
+                {
+                    "@type": "SiteNavigationElement",
+                    "url": "https://almofid.ma/pages/books.html",
+                    "name": "Books",
+                    "position": 4
+                }
+            ]
+        }
+    </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@400..700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: "Edu SA Beginner", serif;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-black">
+  <div class="max-w-5xl mx-auto">
+    <!-- Header -->
+    <header class="flex items-center justify-between p-2 bg-white shadow">
+      <a href="/" class="border-r pr-4 border-gray-200">
+        <img src="/favicon.png" alt="almofid logo" class="w-10 h-10" />
+      </a>
+      <div
+        class="w-14 h-14 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-500 flex items-center justify-center">
+        <img src="/img/profile.png" alt="User Profile" class="w-12 h-12 rounded-full bg-white p-1 cursor-pointer"
+          id="profileImage" />
+      </div>
+      <div class="relative border-l pl-4 border-gray-200">
+        <a href="/pages/books.html" class="text-black">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-10">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+          </svg>
+        </a>
+        <span class="absolute top-0 right-0 bg-red-600 text-white text-xs rounded-full px-1">3</span>
+      </div>
+    </header>
+    <div id="storiesPage" class="hidden fixed inset-0 bg-black/80 z-50 flex justify-center items-center">
+      <div class="relative w-full max-w-md h-full max-h-[80vh] bg-white rounded-lg overflow-hidden">
+        <!-- Stories Container -->
+        <div id="storiesContainer" class="flex flex-col h-full">
+          <!-- Stories Header -->
+          <div class="flex justify-between items-center p-4">
+            <h2 class="text-lg font-semibold">Stories</h2>
+            <button id="closeStories" class="text-gray-600 text-lg">✖</button>
+          </div>
+          <!-- Story Content -->
+          <div id="storyContent"
+            class="flex-1 flex items-center justify-center bg-black text-white text-center p-8 text-xl">
+            <p>Story Content Here</p>
+          </div>
+          <!-- Story Controls -->
+          <div class="flex justify-between p-4">
+            <button id="prevStory" class="text-gray-500">Précédent</button>
+            <button id="nextStory" class="text-gray-500">Suivant</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container p-2">
+      <div class="flex items-center my-2 gap-2">
+        <a href="/" class="flex items-center ">
+          <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+            </svg>
+          </div>
+          <span class="ml-2">Accueil</span>
+        </a>
+        <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-4">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+          </svg>
+        </div>
+        <a href="/pages/1er-ac.html">
+          <span class="ml-2">1ère année</span>
+        </a>
+      </div>
+      <table class="mb-2">
+        <tr class="border-2 border-red-400 rounded-full overflow-hidden">
+          <td class="border p-2 bg-[#F72C5B] text-white w-full text-lg font-bold">Olympiade de Mathématique</td>
+          <td class="border p-2 text-center">
+            <button
+              onclick="downloadFile('https://drive.google.com/drive/folders/1niVkOSZCejMKMBivnCSq2AkbKOu96kaF?usp=sharing')"
+              class="text-red-500">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+              </svg>
+            </button>
+          </td>
+        </tr>
+      </table>
+      <!-- Semester I -->
+      <section id="semester1" class="border rounded-lg overflow-hidden">
+        <div class="flex justify-between items-center bg-teal-700 text-white p-3 cursor-pointer"
+          onclick="toggleSection('semester1-content')">
+          <h2 class="text-lg font-bold">Semestre N° I</h2>
+          <span id="semester1-toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14" />
+            </svg>
+          </span>
+        </div>
+        <div id="semester1-content" class="p-2">
+          <table class="mb-2">
+            <tr>
+              <td class="border p-2 bg-purple-200 w-full">Planification Périodique </td>
+              <td class="border p-2 text-center">
+                <button
+                  onclick="downloadFile('https://drive.google.com/file/d/1reBANLiN40sIWlNGCa5hqh49rIp_UGNz/view?usp=sharing')"
+                  class="text-blue-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+          </table>
+          <table class="mb-2">
+            <tr>
+              <td class="border p-2 bg-orange-200 w-full">Evaluation Diagnostique</td>
+              <td class="border p-2 text-center">
+                <button
+                  onclick="downloadFile('https://drive.google.com/file/d/1W3UdhkjplCF2tMyi4nFgEk16lpQmwz_J/view?usp=sharing')"
+                  class="text-blue-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+          </table>
+          <!-- Table -->
+          <table class="w-full border-collapse border border-gray-200 text-sm">
+            <!-- Title -->
+            <thead>
+              <tr class="bg-gray-100">
+                <th class="border p-2">Cours</th>
+                <th class="border p-2"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border p-2">Opération sur les nombres entiers et les nombres decimaux positifs </td>
+                <td class="border p-2 text-center">
+                  <button
+                    onclick="downloadFile('https://drive.google.com/file/d/10dgLZI4PumJ4WF6pOcta9Umia8MgSw1H/view?usp=sharing')"
+                    class="text-blue-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="border p-2">Les Nombres en écriture fractionnaire</td>
+                <td class="border p-2 text-center">
+                  <button
+                    onclick="downloadFile('https://drive.google.com/file/d/110WjQLE18E633S1Z9KgbhVFvmu3lxuPb/view?usp=sharing')"
+                    class="text-blue-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="border p-2">Opérations sur Les Nombres en écriture fractionnaire</td>
+                <td class="border p-2 text-center">
+                  <button
+                    onclick="downloadFile('https://drive.google.com/file/d/1zEWEK4UiO8bWIUy_UJKem3p4wqgIuW4s/view?usp=sharing')"
+                    class="text-blue-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="my-2">
+            <tr>
+              <td class="border p-2 bg-yellow-200 w-full">Devoir à la maison N° 1</td>
+              <td class="border p-2 text-center">
+                <button
+                  onclick="downloadFile('https://drive.google.com/file/d/1Yh60HbrgP2GuDwpIqplpd9I_mYgJl5L2/view?usp=sharing')"
+                  class="text-blue-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+          </table>
+          <table class="w-full border-collapse border border-gray-200 text-sm">
+            <!-- Title -->
+            <thead>
+              <tr class="bg-gray-100">
+                <th class="border p-2">Cours</th>
+                <th class="border p-2"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border p-2">Les nombres décimaux relatifs</td>
+                <td class="border p-2 text-center">
+                  <button
+                    onclick="downloadFile('https://drive.google.com/file/d/186u5KlqMNHffgbmf3gKUk3bn-zqpY9wd/view?usp=sharing')"
+                    class="text-blue-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="border p-2">Addition et soustraction des nombres décimaux relatifs</td>
+                <td class="border p-2 text-center">
+                  <button
+                    onclick="downloadFile('https://drive.google.com/file/d/1jG-4VLM5p1N8ybAYe0sZ82dVQwlNqqvT/view?usp=sharing')"
+                    class="text-blue-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="border p-2">Multiplication et division des nombres décimaux relatifs</td>
+                <td class="border p-2 text-center">
+                  <button
+                    onclick="downloadFile('https://drive.google.com/file/d/1XDlS5hzU3xSPshpM5SAXTF7Q5TAfe4bH/view?usp=sharing')"
+                    class="text-blue-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="border p-2">la droite dans le plan</td>
+                <td class="border p-2 text-center">
+                  <button
+                    onclick="downloadFile('https://drive.google.com/file/d/1Bary9oevwfEZQtjGfUM2wcE_kViibsXa/view?usp=sharing')"
+                    class="text-blue-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="border p-2">Les Puissances</td>
+                <td class="border p-2 text-center">
+                  <button
+                    onclick="downloadFile('https://drive.google.com/file/d/1zuFvuv7gavuBsaHVHvdZxwiypvtBC1bo/view?usp=sharing')"
+                    class="text-blue-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="my-2">
+            <tr>
+              <td class="border p-2 bg-yellow-200 w-full">Devoir à la maison N° 2</td>
+              <td class="border p-2 text-center">
+                <button
+                  onclick="downloadFile('https://drive.google.com/file/d/1B6AoGh8FdoCp6-0s1IPboQfiWR0JsbeQ/view?usp=sharing')"
+                  class="text-blue-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+          </table>
+          <table class="w-full border-collapse border border-gray-200 text-sm">
+            <!-- Title -->
+            <thead>
+              <tr class="bg-gray-100">
+                <th class="border p-2">Cours</th>
+                <th class="border p-2"></th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td class="border p-2 w-full">Périmètres et Aires</td>
+                <td class="border p-2 text-center">
+                  <button
+                    onclick="downloadFile('https://drive.google.com/file/d/1CZPwAi8mUPZo9pWds_FnlDWfZA6yOlvf/view?usp=sharing')"
+                    class="text-blue-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="border p-2 w-full">Le Triangle</td>
+                <td class="border p-2 text-center">
+                  <button
+                    onclick="downloadFile('https://drive.google.com/file/d/1ZiiW-UdYAB9oJT9kBU7vBqHBA7KG9mhY/view?usp=sharing')"
+                    class="text-blue-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="border p-2 w-full">Triangle et médiatrices</td>
+                <td class="border p-2 text-center">
+                  <button
+                    onclick="downloadFile('https://drive.google.com/file/d/1Ay0Pat2whWk3LahxI8166bLk0stqEesj/view?usp=sharing')"
+                    class="text-blue-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+          <table class="my-2">
+            <tr>
+              <td class="border p-2 bg-yellow-200 w-full">Devoir à la maison N° 3</td>
+              <td class="border p-2 text-center">
+                <button
+                  onclick="downloadFile('https://drive.google.com/file/d/1Gqc1YYUhRUijGjIunjk_bZfKNRoZ_F0S/view?usp=sharing')"
+                  class="text-blue-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                  </svg>
+                </button>
+                <!-- <button>
+                      <img src="/assets/time-left.png" alt="time left" class="min-w-[24px]" width="24" height="24" style="width: 24px; height: 24px;"/>
+                    </button> -->
+              </td>
+            </tr>
+          </table>
+          <!-- Add more sections as necessary -->
+        </div>
+      </section>
+
+      <!-- Semester II -->
+      <section id="semester2" class="mt-2 border rounded-lg overflow-hidden">
+        <div class="flex justify-between items-center bg-teal-700 text-white p-3 cursor-pointer"
+          onclick="toggleSection('semester2-content')">
+          <h2 class="text-lg font-bold">Semestre N° II</h2>
+          <span id="semester2-toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+            </svg>
+          </span>
+        </div>
+        <div id="semester2-content" class="hidden p-4">
+          <!-- Content for Semester II -->
+          <p>Semester II content here...</p>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    // Expand/collapse functionality
+    function toggleSection(sectionId) {
+      const sectionContent = document.getElementById(sectionId);
+      const toggleButton =
+        sectionContent.previousElementSibling.querySelector("span svg");
+
+      if (sectionContent.classList.contains("hidden")) {
+        sectionContent.classList.remove("hidden");
+        toggleButton.innerHTML =
+          '<path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14" />';
+      } else {
+        sectionContent.classList.add("hidden");
+        toggleButton.innerHTML =
+          '<path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />';
+      }
+    }
+
+    // Download file functionality
+    function downloadFile(url) {
+      window.open(url, "_blank");
+    }
+  </script>
+
+  <script>
+    document.getElementById('profileImage').addEventListener('click', () => {
+      document.getElementById('storiesPage').classList.remove('hidden');
+    });
+
+    document.getElementById('closeStories').addEventListener('click', () => {
+      document.getElementById('storiesPage').classList.add('hidden');
+    });
+
+    const stories = [
+      { id: 1, content: "مرحبًا بكم في موقعي! أنا سعيد جدًا بأنكم هنا، وسأقوم بتحديث المحتوى بشكل مستمر، فابقوا على تواصل! 📚✨" },
+      { id: 2, content: "أتمنى أن تجدوا هنا كل ما تحتاجونه لدعم دراستكم. ترقبوا المزيد من المحتوى قريبًا ⏳📖" },
+      { id: 3, content: "أسأل الله لكم التوفيق والنجاح 🙏🎓" },
+    ];
+
+
+    let currentStory = 0;
+
+    function updateStory() {
+      const storyContent = document.getElementById('storyContent');
+      storyContent.innerHTML = `<p>${stories[currentStory].content}</p>`;
+    }
+
+    document.getElementById('prevStory').addEventListener('click', () => {
+      if (currentStory > 0) {
+        currentStory--;
+        updateStory();
+      }
+    });
+
+    document.getElementById('nextStory').addEventListener('click', () => {
+      if (currentStory < stories.length - 1) {
+        currentStory++;
+        updateStory();
+      }
+    });
+
+    // Initialize first story
+    updateStory();
+
+  </script>
+</body>
+
+</html>
