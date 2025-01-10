@@ -67,8 +67,8 @@
   </style>
 </head>
 
-<body class="bg-white text-black">
-  <div class="max-w-5xl mx-auto">
+<body class="bg-gray-50 text-black">
+  <div class="max-w-5xl mx-auto bg-white">
     <!-- Header -->
     <header class="flex items-center justify-between p-2 bg-white shadow">
       <a href="/" class="border-r pr-4 border-gray-200">
@@ -486,56 +486,78 @@
   </script>
 
   <script>
-    document.getElementById('profileImage').addEventListener('click', () => {
-      document.getElementById('storiesPage').classList.remove('hidden');
-    });
+  document.getElementById('profileImage').addEventListener('click', () => {
+    document.getElementById('storiesPage').classList.remove('hidden');
+  });
 
-    document.getElementById('closeStories').addEventListener('click', () => {
-      document.getElementById('storiesPage').classList.add('hidden');
-    });
+  document.getElementById('closeStories').addEventListener('click', () => {
+    document.getElementById('storiesPage').classList.add('hidden');
+  });
 
-    const stories = [
-      { id: 1, content: "مرحبًا بكم في موقعي! أنا سعيد جدًا بأنكم هنا، وسأقوم بتحديث المحتوى بشكل مستمر، فابقوا على تواصل! 📚✨" },
-      { id: 2, content: "أتمنى أن تجدوا هنا كل ما تحتاجونه لدعم دراستكم. ترقبوا المزيد من المحتوى قريبًا ⏳📖" },
-      { id: 3, content: "أسأل الله لكم التوفيق والنجاح 🙏🎓" },
-    ];
+  const stories = [
+    // {
+    //   id: 1,
+    //   content: "مرحبًا بكم في موقعي! أنا سعيد جدًا بأنكم هنا، وسأقوم بتحديث المحتوى بشكل مستمر، فابقوا على تواصل! 📚✨",
+    // },
+    // {
+    //   id: 2,
+    //   content: "أتمنى أن تجدوا هنا كل ما تحتاجونه لدعم دراستكم. ترقبوا المزيد من المحتوى قريبًا ⏳📖",
+    // },
+    // {
+    //   id: 3,
+    //   content: "أسأل الله لكم التوفيق والنجاح 🙏🎓",
+    // },
+    {
+      id: 4,
+      content:
+        "📄 Examen local 3ème année collège: 2024<br>انقر على الزر أدناه لتنزيل الامتحان 👇",
+      button: {
+        label: "تحميل الامتحان",
+        link: "https://drive.google.com/file/d/1SijZ6VXA3Iz82tSEhxRwgQ1nxqpCzg5m/view?usp=sharing",
+      },
+    },
+  ];
 
+  let currentStory = 0;
 
-    let currentStory = 0;
+  function updateStory() {
+    const storyContent = document.getElementById('storyContent');
+    const story = stories[currentStory];
 
-    function updateStory() {
-      const storyContent = document.getElementById('storyContent');
-      storyContent.innerHTML = `<p>${stories[currentStory].content}</p>`;
+    if (story.button) {
+      storyContent.innerHTML = `
+      <div>
+        <p>${story.content}</p></br>
+        </br>
+        </br>
+        <a href="${story.button.link}" target="_blank" class="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg">
+          ${story.button.label}
+        </a>
+        
+      </div>
+      `;
+    } else {
+      storyContent.innerHTML = `<p>${story.content}</p>`;
     }
+  }
 
-    document.getElementById('prevStory').addEventListener('click', () => {
-      if (currentStory > 0) {
-        currentStory--;
-        updateStory();
-      }
-    });
+  document.getElementById('prevStory').addEventListener('click', () => {
+    if (currentStory > 0) {
+      currentStory--;
+      updateStory();
+    }
+  });
 
-    document.getElementById('nextStory').addEventListener('click', () => {
-      if (currentStory < stories.length - 1) {
-        currentStory++;
-        updateStory();
-      }
-    });
+  document.getElementById('nextStory').addEventListener('click', () => {
+    if (currentStory < stories.length - 1) {
+      currentStory++;
+      updateStory();
+    }
+  });
 
-    // Initialize first story
-    updateStory();
-
-  </script>
-
-   <!-- Google tag (gtag.js) -->
-   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0B8HTRYQ4S"></script>
-   <script>
-       window.dataLayer = window.dataLayer || [];
-       function gtag() { dataLayer.push(arguments); }
-       gtag('js', new Date());
-
-       gtag('config', 'G-0B8HTRYQ4S');
-   </script>
+  // Initialize first story
+  updateStory();
+</script>
 </body>
 
 </html>
