@@ -163,7 +163,7 @@
             </svg>
           </span>
         </div>
-        <div id="semester1-content" class="p-2">
+        <div id="semester1-content" class="p-2 hidden">
           <table class="mb-2">
             <tr>
               <td class="border p-2 bg-purple-200 w-full">Planification Périodique </td>
@@ -453,9 +453,47 @@
             </svg>
           </span>
         </div>
-        <div id="semester2-content" class="hidden p-4">
+        <div id="semester2-content" class="p-4">
           <!-- Content for Semester II -->
-          <p>Semester II content here...</p>
+          <table class="w-full border-collapse border border-gray-200 text-sm">
+            <!-- Title -->
+            <thead>
+              <tr class="bg-gray-100">
+                <th class="border p-2">Cours</th>
+                <th class="border p-2"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border p-2">Calcul littéral</td>
+                <td class="border p-2 text-center">
+                  <button
+                    onclick="downloadFile('https://drive.google.com/file/d/1FxO9av7OfhxUsbCj2OcZ8HBuiiGm-t85/view?usp=sharing')"
+                    class="text-blue-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="border p-2">équation</td>
+                <td class="border p-2 text-center">
+                  <button
+                    onclick="downloadFile('https://drive.google.com/file/d/1c5tCMhSIssJYC8w8UldqnBmQ_RBbaj1g/view?usp=sharing')"
+                    class="text-blue-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </section>
     </div>
